@@ -11,6 +11,8 @@ import EmailSwipe from './Components/gastureHandler/EmailSwipe';
 import { Appearance } from 'react-native';
 import { useState } from 'react';
 import AnimatedBtnLoader from './Components/AnimatedBtnLoader';
+import AnimationUsingInterpolation from './Components/AnimationUsingInterpolation';
+import MoveBtn from './Components/gastureHandler/MoveBtn';
 
 export default function App() {
   
@@ -35,7 +37,9 @@ export default function App() {
         {/* <LockScreen /> */}
         {/* <SwipeButton /> */}
         {/* <EmailSwipe /> */}
-        <AnimatedBtnLoader />
+        {/* <AnimatedBtnLoader /> */}
+        {/* <AnimationUsingInterpolation /> */}
+        <MoveBtn />
       </GestureHandlerRootView>
   );
 }

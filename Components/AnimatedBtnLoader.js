@@ -1,5 +1,5 @@
 import { View, Text, ActivityIndicator, TouchableOpacity } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
 
 const LoginBtn = Animated.createAnimatedComponent(TouchableOpacity)
