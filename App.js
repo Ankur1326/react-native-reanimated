@@ -10,6 +10,7 @@ import SwipeButton from './Components/gastureHandler/SwipeButton';
 import EmailSwipe from './Components/gastureHandler/EmailSwipe';
 import { Appearance } from 'react-native';
 import { useState } from 'react';
+import AnimatedBtnLoader from './Components/AnimatedBtnLoader';
 
 export default function App() {
   
@@ -30,10 +31,11 @@ export default function App() {
         {/* <CartInfo /> */}
         {/* <BottomNav /> */}
         {/* <AnotherNavigation /> */}
-        <CircleAnimation />
+        {/* <CircleAnimation /> */}
         {/* <LockScreen /> */}
         {/* <SwipeButton /> */}
         {/* <EmailSwipe /> */}
+        <AnimatedBtnLoader />
       </GestureHandlerRootView>
   );
 }
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: "center",
-    justifyContent: "center"
+    // alignItems: "center",
+    // justifyContent: "center"
   },
 });

@@ -101,7 +101,7 @@ const BottomNav = () => {
                         <Ionicons name="bag-outline" size={24} color="black" />
                     </Animated.View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => setSelectedTab(3)}>
+                <TouchableOpacity onPress={() => setSelectedTab(2)}>
                     <Animated.View style={[{}, animatedBtn2Style]} >
                         <AntDesign name="user" size={24} color="black" />
                     </Animated.View>

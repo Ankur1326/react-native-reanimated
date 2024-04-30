@@ -8,7 +8,7 @@ const CartInfo = () => {
     const [count, setCount] = useState(0)
     const animateX = useSharedValue(0)
     const animateY = useSharedValue(0)
-    const scale = useSharedValue(1)
+    const scale = useSharedValue(0)
     const scale2 = useSharedValue(1)
 
     const animatedStyle = useAnimatedStyle(() => {
