@@ -1,12 +1,40 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import CartInfo from './Components/CartInfo';
+import BottomNav from './Components/BottomNav';
+import AnotherNavigation from './Components/AnotherNavigation';
+import CircleAnimation from './Components/gastureHandler/CircleAnimation';
+import LockScreen from './Components/gastureHandler/LockScreen';
+import { GestureHandlerRootView } from "react-native-gesture-handler"
+import SwipeButton from './Components/gastureHandler/SwipeButton';
+import EmailSwipe from './Components/gastureHandler/EmailSwipe';
+import { Appearance } from 'react-native';
+import { useState } from 'react';
 
 export default function App() {
+  
+  const [systemTheme, setSystemTheme] = useState(Appearance.getColorScheme());
+  console.log("systemTheme :: ", systemTheme);
+  
+  
+  Appearance.addChangeListener(({ colorScheme }) => {
+    setSystemTheme(colorScheme);
+    console.log("colorScheme : ", colorScheme);
+  });
+  
+  console.log("systemTheme ::: ", systemTheme);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <GestureHandlerRootView style={styles.container}>
+        <StatusBar style="auto" />
+        {/* <CartInfo /> */}
+        {/* <BottomNav /> */}
+        {/* <AnotherNavigation /> */}
+        <CircleAnimation />
+        {/* <LockScreen /> */}
+        {/* <SwipeButton /> */}
+        {/* <EmailSwipe /> */}
+      </GestureHandlerRootView>
   );
 }
 
@@ -14,7 +42,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center"
   },
 });
